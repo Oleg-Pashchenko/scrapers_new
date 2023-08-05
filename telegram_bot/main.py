@@ -9,7 +9,7 @@ from aiogram.types import ReplyKeyboardRemove, InlineKeyboardMarkup, InlineKeybo
 from aiogram.utils import executor
 
 import db
-from telegram_bot.utils import download_image
+from utils import download_image
 
 dotenv.load_dotenv()
 bot = Bot(token=os.getenv('TELEGRAM_BOT_TOKEN'))
