@@ -33,7 +33,7 @@ async def send_item(message: types.Message):
     await bot.send_media_group(message.chat.id, media=photos)
 
     text = f"Источник:\nID: {unas_item.code}\nИмя: {unas_item.name}\n<a href='{unas_item.link}'>Посмотреть товар</a>"
-    text += f"\n\nМаркетплейс:\nID: {ozon_item.code}\nИмя: {ozon_item.name}\n<a href='{unas_item.link}'>Посмотреть товар</a>"
+    text += f"\n\nМаркетплейс:\nID: {ozon_item.code}\nИмя: {ozon_item.name}\n<a href='{ozon_item.link}'>Посмотреть товар</a>"
     reply_markup = InlineKeyboardMarkup()
     reply_markup.add(
         InlineKeyboardButton(text='✅', callback_data=f'approve_{ozon_item.id}'),
