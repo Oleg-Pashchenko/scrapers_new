@@ -46,6 +46,8 @@ def get_items() -> Tuple[Item, Item]:
         return None, None  # Если нет подходящих записей, вернуть None
 
     record = random.choice(records)  # Выбор случайной записи из результатов запроса
+    print(record)
+    time.sleep(3000)
     unas_item = Item(
         id=record[0], name=record[1], code=record[2], image=record[3], link=record[4]
     )
