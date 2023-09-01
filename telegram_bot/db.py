@@ -31,9 +31,11 @@ def get_items() -> Tuple[Item, Item]:
     # Запрос к базе данных для получения непроиндексированных товаров Ozon
     cur.execute("SELECT * FROM ozon WHERE is_edited=FALSE;")
     records = cur.fetchall()
-
+    filtered_records = []
+    for record in records:
+        if 'semena-i-posadochnyy-material' not in record[4] and 'tovary-dlya-otdyha' not in record[4] and 'tovary-dlya-sada' not in record[4]:
+            filtered_records.append(record)
     # Фильтрация записей на этапе получения
-    filtered_records = [record for record in records if not any(substring in record[4] for substring in ["semena-i-posadochnyy-material", "tovary-dlya-otdyha", "tovary-dlya-sada"])]
 
     if not filtered_records:
         conn.close()
