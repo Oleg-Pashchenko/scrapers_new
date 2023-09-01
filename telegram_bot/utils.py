@@ -8,4 +8,3 @@ def download_image(link: str, index):
         handler.write(img_data)
     handler.close()
     return filename
-
