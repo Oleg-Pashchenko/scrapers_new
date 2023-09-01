@@ -33,6 +33,7 @@ def get_items() -> Tuple[Item, Item]:
     records = cur.fetchall()
     filtered_records = []
     for record in records:
+        print(record)
         if 'semena-i-posadochnyy-material' not in record[4] and 'tovary-dlya-otdyha' not in record[4] and 'tovary-dlya-sada' not in record[4]:
             filtered_records.append(record)
     # Фильтрация записей на этапе получения
