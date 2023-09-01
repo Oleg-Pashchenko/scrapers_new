@@ -1,6 +1,8 @@
 import dataclasses  # Импорт модуля для создания классов данных
 import os  # Импорт модуля для работы с операционной системой
 import random  # Импорт модуля для работы с генерацией случайных чисел
+import time
+
 import psycopg2  # Импорт библиотеки для работы с PostgreSQL
 
 
@@ -34,7 +36,7 @@ def get_items() -> Tuple[Item, Item]:
     filtered_records = []
     for record in records:
         print(record)
-        exit(0)
+        time.sleep(1000)
         if 'semena-i-posadochnyy-material' not in record[4] and 'tovary-dlya-otdyha' not in record[4] and 'tovary-dlya-sada' not in record[4]:
             filtered_records.append(record)
     # Фильтрация записей на этапе получения
