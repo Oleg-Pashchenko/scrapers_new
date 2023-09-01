@@ -8,13 +8,13 @@ import os
 dotenv.load_dotenv()
 
 categories = [
-    'semena-i-posadochnyy-material',
-    'tovary-dlya-sada',
-    'tovary-dlya-doma',
-    'tovary-dlya-otdyha',
-    'tovary-dlya-prazdnika',
-    'tovary-dlya-zhivotnyh',
-    'kancelyarskie-tovary'
+    'semena-i-posadochnyy-material', # не надо
+    'tovary-dlya-sada',  # не надо
+    'tovary-dlya-doma',  # нужно
+    'tovary-dlya-otdyha',  # не нужно
+    'tovary-dlya-prazdnika',  # нужно
+    'tovary-dlya-zhivotnyh',  # нужно
+    'kancelyarskie-tovary'  # нужно
 ]
 
 
