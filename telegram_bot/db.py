@@ -52,7 +52,9 @@ def get_items() -> Tuple[Item, Item]:
     ozon_item = Item(
         id=record[5], name=record[6], code=record[7], image=record[8], link=record[9]
     )
-
+    print(unas_item)
+    print(ozon_item)
+    time.sleep(300)
     conn.close()
     return unas_item, ozon_item
 
