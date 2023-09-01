@@ -33,7 +33,7 @@ def get_items() -> Tuple[Item, Item]:
     records = cur.fetchall()
 
     # Фильтрация записей на этапе получения
-    filtered_records = [record for record in records if not any(substring in record[5] for substring in ["semena-i-posadochnyy-material", "tovary-dlya-otdyha", "tovary-dlya-sada"])]
+    filtered_records = [record for record in records if not any(substring in record[4] for substring in ["semena-i-posadochnyy-material", "tovary-dlya-otdyha", "tovary-dlya-sada"])]
 
     if not filtered_records:
         conn.close()
